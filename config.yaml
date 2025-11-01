@@ -1,0 +1,26 @@
+# Default configuration for RoBERTa prompt-tuning ABSA experiments
+experiment:
+  model_name: roberta-base
+  max_length: 128
+  num_virtual_tokens: 20
+  prompt_init_text: "Classify the sentiment of the aspect in the review."
+  output_dir: outputs/roberta-absa
+  seed: 42
+
+data:
+  train_file: data/absa14_rest_train.jsonl
+  validation_file: data/absa14_rest_train.jsonl  # reuse small train split as dev by default
+  test_file: data/absa14_rest_test.jsonl
+  text_field: sentence
+  aspect_field: aspect
+  label_field: label
+
+training:
+  num_train_epochs: 5
+  per_device_train_batch_size: 4
+  per_device_eval_batch_size: 4
+  learning_rate: 3.0e-4
+  weight_decay: 0.01
+  logging_steps: 10
+  evaluation_strategy: epoch
+  save_strategy: epoch
