@@ -1,0 +1,3 @@
+{"sentence": "The appetizers were delightful but the service was slow.", "aspect": "service", "label": "negative"}
+{"sentence": "I loved the spicy tuna roll and the attentive staff.", "aspect": "food", "label": "positive"}
+{"sentence": "Portions are generous although the ambiance feels cramped.", "aspect": "ambience", "label": "neutral"}
